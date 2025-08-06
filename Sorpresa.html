@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Un mensaje especial</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #fff0f5;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .circle-button {
+      width: 650px;  /* botón mega grande */
+      height: 650px;
+      border-radius: 50%;
+      background-color: #e53935;
+      color: white;
+      font-size: 4em;  /* texto proporcional */
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .circle-button:active {
+      transform: scale(0.95);
+    }
+
+    #moccha {
+      display: none;
+      margin-top: 30px;
+      animation: fadeIn 1s ease-in-out forwards;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    #loveText {
+      font-size: 5.25em;
+      color: #e91e63;
+      margin-top: 25px;
+      display: none;
+    }
+
+    .gif-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 700px) {
+      .circle-button {
+        width: 90vw;
+        height: 90vw;
+        font-size: 2.5em;
+      }
+
+      #loveText {
+        font-size: 4em;
+      }
+    }
+
+    @media (max-height: 800px) {
+      body {
+        height: auto;
+        padding: 30px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="circle-button" onclick="showMoccha()">Presióname</button>
+
+  <div id="moccha">
+    <div class="gif-container">
+      <div class="tenor-gif-embed" data-postid="16490153" data-share-method="host" data-aspect-ratio="1.23552" data-width="100%">
+        <a href="https://tenor.com/view/milk-and-mocha-bear-i-love-you-love-you-lots-hearts-ily-gif-16490153">Milk And Mocha Bear I Love You GIF</a>
+        from <a href="https://tenor.com/search/milk+and+mocha+bear-gifs">Milk And Mocha Bear GIFs</a>
+      </div>
+    </div>
+    <div id="loveText">I love you Isabel❤️</div>
+  </div>
+
+  <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+  <script>
+    function showMoccha() {
+      document.querySelector(".circle-button").style.display = "none";
+      document.getElementById("moccha").style.display = "block";
+      document.getElementById("loveText").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
